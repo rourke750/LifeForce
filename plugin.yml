@@ -1,0 +1,8 @@
+name: LifeForce
+version: 1.0
+author: Rourke750
+main: com.sandislandserv.rourke750.LifeForce
+softdepend: [PrisonPearl]
+commands:
+  lf:
+    usage: /<command>

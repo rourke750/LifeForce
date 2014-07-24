@@ -1,0 +1,56 @@
+# Settings for the mysql table
+sql:
+  hostname: localhost
+  port: 3306
+  dbname: lives
+  username: ''
+  password: ''
+
+settings:
+# For new players.
+  players:
+    joining-stamina: 1000
+  timetable:
+# Clock specifies the how often it should check if a player
+# has spent the required amount of time to gain stamina.
+# Remember this is in ticks and 20 ticks equals 1 second.
+    clock: 60
+# Amount specifies the amount of stamina they receive.
+    amount: 100
+# The amount of time in increments that they need to recieve stamina.
+    hour: 1
+    min: 0
+    sec: 0
+  apples:
+# The amount stamina required to make an apple.
+    required: 500
+# The amount of stamina you get from eating an apple.
+    return: 500
+# How long you have to wait to eat an apple.
+    time:
+      hour: 0
+      min: 5
+      sec: 0
+# The max amount of stamina allowed. Set to -1 if you do not wish for a limit
+  max: -1
+# This refers to the negative potion effects to be applied to a player when a certain stamina
+# is reached. Must be the Bukkit name.  Add more potions in the same format to add more
+# negative effects.
+# Potion affects get reapplied at the same time as the settings.timetable.clock
+neg-potions:
+  BLINDNESS:
+# The least amount of stamina a player is allowed to have before they start getting 
+# potion effects.
+    min-stamina: 200
+    potion-level: 1
+# If death ban should be enabled.
+death:
+# Controls the death ban and when a player should be banned.
+  death-ban:
+    enable: false
+    min-stamina: 0
+# The amount of stamina they lose on death.
+  stamina:
+    on-death-lose: 1000
+version: 1
+    
